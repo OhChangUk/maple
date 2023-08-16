@@ -1,0 +1,398 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+*{margin: 0; padding: 0; font-family: 'NanumBarunGothic'; letter-spacing: -0.03em;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+
+.nexon{text-align: center; display: flex; justify-content: center; height: 63px;}
+.nexon ul li a.a{
+    width: 86px;
+    padding: 6px 14px; color: #080410; font-size: 15px; font-weight: bold;
+    border-radius: 19px; border: 2px solid #17191d;
+    position: absolute; top: 13px; right: 27px; transition: 0.15s;
+}
+.nexon ul li:nth-of-type(1):hover a.a{background-color: rgb(0, 110, 255); color: #fff;}
+
+.nexon ul li a.b{
+    font-size: 14px; display: block; position: absolute;
+    right: 160px; top: 23px; transition: 0.15s;
+}
+.nexon ul li:nth-of-type(2):hover a.b{color: rgb(0, 110, 255);}
+    
+.nexon label{position: absolute; left: 24px; top: 25px; cursor: pointer;}
+.nexon label:hover .btn-line{background-color: rgb(0, 110, 255);}
+.nexon label:hover .menu{color: rgb(0, 110, 255);}
+.nexon label .btn-line{
+    width: 16px; height: 2px; background-color: #000;
+    margin-bottom: 4px;
+    display: block; border-radius: 5px; transition: 0.5s;
+}
+.nexon label .menu{display: block; top: -23px; left: 26px; position: relative;
+    font-weight: bold; transition: 0.5s;}
+
+
+/* 메인 공지 */
+.header{width: 100%; height: 560px; position: relative; overflow: hidden;}
+.header a img{position: absolute;}
+.main-slide{height: 100%;}
+.main-slide > ul  >li{display: none;}
+.main-slide  > ul > li > img{width: 100%; height: 100%;}
+
+.main-slide .inner-txt{width: 1280px; height: 420px; position: absolute;}
+.main-slide .inner-txt ul{position: relative; left: 33%; top: 52%; width: 50%;}
+.main-slide .inner-txt ul li a h2{font-size: 52px; color: #fff; font-weight: 400; line-height: 62px; letter-spacing: -0.03em; }
+.main-slide .inner-txt ul li a p{color: #fff; font-size: 19px; margin-top: 33px; font-weight: 100;}
+.main-slide > ul li:nth-of-type(22) .inner-txt ul li a h2{letter-spacing: -0.14em;}
+
+.header .main-bar{position: absolute; top: 468px; width: 100%; z-index: 99; height: 93px;}
+.header .main-bar .thumbs{position: absolute; bottom: 0; width: 100%; height: 93px; left: 0; display: flex; align-items: center;}
+.header .main-bar .thumbs ul{display: flex;}
+.header .main-bar .thumbs .thumbs-wrap{width: 1100px; height: 46px; margin: 0 auto; position: relative; overflow: hidden; }
+.header .main-bar .thumbs .thumbs-wrap .thumbs-area{width: 500%; display: flex; position: relative;}
+.header .main-bar .thumbs ul li{margin-left: 17px; flex-basis: 210px; width: 210px; position: relative;}
+.header .main-bar .thumbs ul li:nth-child(2){margin-right: 180px;}
+.header .main-bar .thumbs .img img{width: 100px; height: 40px; position: relative; opacity: 0.3; }
+.header .main-bar .thumbs ul li:hover img,
+.header .main-bar .thumbs ul li.on img{opacity: 1; border: 2px solid orange;}
+.header .main-bar .thumbs ul li:hover .txt,
+.header .main-bar .thumbs ul li.on .txt{color: #fff;}
+
+.header .main-bar .thumbs a{display: flex; font-size: 12px; color: #686868; margin-top: 7px;}
+.header .main-bar .thumbs a .txt{margin-left: 15px; margin-top: 4px; letter-spacing: -0.1em;}
+
+.header .main-bar img{width: 100%; height: 100%;}
+.header .main-bar > ul{position: relative; z-index: 4; top: 0;}
+.header .main-bar > ul li{position: absolute;}
+.header .main-bar > ul li a{position: absolute; color: #686868; width: 210px; height: 45px; font-size: 12px; display: flex; line-height: 17px; top: -65px;}
+.header .main-bar > ul li a img{width: 100px; height: 42px; }
+.header .main-bar > ul li a .txt{margin-top: 4px; position: relative; left: 114px;}
+.header .main-bar > ul li:nth-of-type(1) a{left: 419px;}
+.header .main-bar > ul li:nth-of-type(2) a{left: 646px;}
+.header .main-bar > ul li:nth-of-type(3) a{left: 1055px;}
+.header .main-bar > ul li:nth-of-type(4) a{left: 1280px;}
+ 
+.thumbs-slide .swiper-slide.swiper-slide-thumb-active{
+    border: 3px solid #f68500;
+    color: #fff;
+}
+
+.header .main-bar .slide-nb > ul{display: flex; position: absolute; left: 879px; width: 137px; top: 7px; z-index: 10;}
+.header .main-bar .slide-nb > ul li img{height: 16px;}
+.header .main-bar .slide-nb > ul li{font-size: 22px; font-weight: 200; position: absolute; margin-top: 5px;}
+.header .main-bar .slide-nb > ul li:nth-child(1){color: #f68500;}
+.header .main-bar .slide-nb > ul li:nth-child(3){color: #cecece;}
+.header .main-bar .slide-nb > ul li:not(:last-child){position: relative; left: 30px;}
+.header .main-bar .slide-nb > ul li:nth-child(4) a{left: 100px; position: absolute; width: 18px; height: 18px; margin-top: 3px;}
+.header .main-bar .slide-nb ul li:nth-child(4) a img{height: 18px; width: 18px;}
+
+.header .main-bar .arrow{width: 100%; height: 100%;}
+.header .main-bar .arrow ul{position: relative; left: 368px;}
+.header .main-bar .arrow ul li{position: absolute; top: -55px;}
+.header .main-bar .arrow ul li:nth-of-type(1) a{left: 368px;}
+.header .main-bar .arrow ul li:nth-of-type(2){right: 750px;}
+.header .main-bar .arrow img{width: 15px; height: 20px; }
+
+
+
+.header .header-wrap{width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.header .header-wrap .logo a img{top: 2.7%; position: absolute; left: 18.5%; z-index: 98;}
+.header .nav{flex-basis: 100%; position: absolute; top: 30px; left: 31%; width: 53.3%; z-index: 98;}
+.header .nav ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
+.header .nav > ul > li{font-weight: bold; position: relative; top: 25px; left: -30px; }
+.header .nav > ul > li > a{color: #fff;}
+.header .nav > ul > li:hover > a{color: orange;}
+.header .nav ul li{position: relative; flex-basis: 15%; text-align: center; font-size: 21px; font-weight: bold;}
+
+
+.header .nav .submenu ul li a{color: #a7acbc; font-size: 13px;}
+.header .nav .submenu ul li:hover a{color: orange;}
+
+.header .nav .submenu{background-color: #2b2531; display: flex; justify-content: space-between; flex-wrap: wrap; transition: 0.5s; position: absolute; width: 100%; height: 0; overflow: hidden;
+position: absolute; left: -30px; top: 70px;}
+.header .nav .submenu ul{flex-basis: 15%;}
+.header .nav .submenu ul li{flex-basis: 100%;}
+.header .nav:hover .submenu{height: 250px;}
+/* 메인 공지 끝 */
+
+/* 언더 바 시작 */
+.under-bar{background-color: #252428; height: 180px; position: relative; width: 100%;}
+.under-bar .update-center{display: flex; position: relative; height: 100%;}
+.under-bar .update-center a{position: relative; left: 18.5%; top: 25px;}
+.under-bar .update-center a:not(:nth-child(1)){display: block;}
+.under-bar .update-center a:nth-child(2){color: #f68500; font-size: 24px; position: relative;
+margin-top: 35px; font-weight: 100; left: 370px; top: 25px;}
+.under-bar .update-center a:nth-child(3){color: #a9a9a9; font-size: 15px; position: relative;
+left: 196px; top: 100px; letter-spacing: -0.03em;}
+
+.under-bar .start-btn a{position: absolute; left: 43.4%; top: -26.5%; overflow: hidden; width: 252px; height: 252px; z-index: 99;}
+.under-bar .download a{position: absolute; left: 45.75%; top: 98%; z-index: 99;}
+
+.under-bar .login ul li{position: absolute; right: 352px; top: 15%; display: flex;}
+.under-bar .login ul li a:nth-child(1){margin-right: 7px;}
+
+.under-bar .easy-login a{background-color: rgba(17, 17, 18, .6);  position: absolute; right: 653px; top: 50%; width: 134px; height: 38px; text-align: center;}
+.under-bar .easy-login img{position: relative; top: 8px; left: -1px;}
+
+.under-bar .easy-login2{width: 298px; height: 38px; background:url("https://ssl.nexon.com/s2/game/maplestory/renewal/common/tpa_login_bg.png") center top no-repeat; position: absolute; right: 352px; top: 50%;}
+.under-bar .easy-login2 ul{margin-left: 157px; padding-top: 8px;}
+.under-bar .easy-login2 ul li a:nth-child(1){margin-right: 6px;}
+.under-bar .easy-login2 ul li a:nth-child(2){margin-right: 6.5px;}
+.under-bar .easy-login2 ul li a:nth-child(3){margin-right: 7px;}
+
+.join ul{position: absolute; right: 655px; bottom: 25px;}
+.join ul li a:nth-child(2){margin-left: -4px;}
+/* 언더 바 끝 */
+
+/* 전체메뉴 */
+.all-menu{
+    position: absolute;
+    width: 100%;
+    height: 560px;
+    bottom:  0;
+    left: 0;
+    background-color: #2b2b36;
+    z-index: 9999;
+    overflow: hidden;
+    display: none;
+}
+.all-menu .title{
+    width: 1200px; margin: 0 auto;
+    position: relative; margin-bottom: 20px;
+}
+.all-menu h3{width: 1200px; margin: 0 auto; font-weight: 300; font-size: 28px; color: #fff; text-align: center; padding-top: 35px; position: relative;}
+.all-menu .close{position: absolute; right: -25px; bottom: 0; width: 36px !important; height: 36px !important; cursor: pointer;}
+.all-menu .all-menu-wrap{width: 1280px; margin: 0 auto; position: relative; height: 409px;
+    overflow: hidden;}
+.all-menu .all-menu-wrap > ul{display: flex; flex-wrap: wrap; justify-content: space-between; height: 369px; overflow: hidden; transition: 1s; position: absolute; display: none;}
+.all-menu .all-menu-wrap .all-content p{color: #fff; font-size: 16px; font-weight: 100; margin-top: 7px; letter-spacing: -0.1em;}
+.all-menu .all-menu-wrap .all-content span{font-size: 12px; color: #7e7e7e; letter-spacing: -0.03em;}
+@keyframes opacity1 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes opacity2 {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.all-menu .all-menu-wrap > ul.on{display: flex; animation: opacity1 0.2s forwards linear;}
+.all-menu .all-menu-wrap > ul.out{animation: opacity2 0.2s forwards linear}
+.all-menu .all-menu-wrap > ul li{flex-basis: 23.5%;}
+.all-menu .all-menu-wrap > ul li img{height: auto !important; width: auto !important; position: relative !important;}
+.all-menu .indicator{
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+.all-menu .indicator ul{display: flex; justify-content: space-between; width: 60px;}
+.all-menu .indicator ul li{flex-basis: 25px; height: 8px; background-color: #09090B; border-radius: 30px; font-size: 0; cursor: pointer;}
+.all-menu .indicator ul li.on, .all-menu .indicator ul li:hover{background-color: #EE8400; cursor: pointer;}
+/* 전체메뉴 */
+
+.main_board .cash-bn .checkbox{position: absolute; bottom: 55px; left: 50%; transform: translateX(-50%); z-index: 5;}
+.main_board .cash-bn .checkbox ul{display: flex; justify-content: center; position: relative; align-items: flex-end; bottom: -43px; column-gap: 4px;}
+.main_board .cash-bn .checkbox ul li{height: 11px; background-color: #fff; border-radius: 50px; font-size: 0; transition: 0.3s; cursor: pointer; width: 11px;}
+.main_board .cash-bn .checkbox ul li.on{background-color: #94aef4; width: 39px;}
+
+/* 메인보드 시작 */
+.main_board{width: 100%; height: 332px;}
+.main_board .main_board-wrap{width: 1280px; height: 100%; margin: 0 auto; display: flex; position: relative;}
+.main_board .cash-bn{position: relative; margin-right:36px;}
+.main_board .main_board-wrap .cash-bn> ul{display: flex; width: 350px; height: 310px; overflow: hidden; position: relative;}
+.main_board .main_board-wrap .cash-bn> ul li{position: absolute; opacity: 0; transition: 0.5s;}
+.main_board .main_board-wrap .cash-bn> ul li.on{opacity: 1; z-index: 1;}
+.main_board .main_board-wrap .cash-bn> ul> li a img{border-radius: 30px; margin-right: 80px;  position: relative; top: 70px; left: 40px;}
+
+.main_board .main_board-wrap .cash-bn .cash-underbar{width: 306px; height: 35px; background: rgb(0,0,0,0.2); position: absolute; left: 40px; bottom: 44px; border-radius: 0 0 30px 30px; z-index: 2;}
+
+.main_board .update-info{width: 277px; height: 138px; position: relative; top: 71px; left: 38px;}
+.main_board .update-info ul li:nth-child(1){background-color: #5d7acb; display: flex; justify-content: center; align-items: center; border-radius: 30px; color: #fff; width: 81px; height: 49px;}
+.main_board .update-info ul li:nth-child(2){margin-top: 10px; font-size: 20px; letter-spacing: -0.03em; font-weight: 100;}
+.main_board .update-info ul li:nth-child(3){color: #888888; padding-top: 22px; background: url(https://lwi.nexon.com/maplestory/main/main_dot.png) left top no-repeat; margin-top: 15px;  letter-spacing: -0.03em;}
+.main_board .update-info ul li:hover a{text-decoration: underline;}
+
+.main_board .client-update-wrap{width: 444px; height: 320px; position: relative; top: 71px; left: 133px;}
+.main_board .client-update-wrap .client-update ul li{display: flex; align-items: center; margin-bottom: 15px; padding-bottom: 20px;}
+.main_board .client-update-wrap .client-update ul li:not(:nth-child(4)){border-bottom: 1px solid #ebebeb;}
+.main_board .client-update-wrap .client-update ul li p{background-color: #5d7acb; width: 49px; height: 28px; border-radius: 20px; display: flex; justify-content: center; align-items: center; color: #fff;}
+.main_board .client-update-wrap .client-update ul li a{font-size: 18px; margin-left: 5px;}
+.main_board .client-update-wrap .client-update ul li:hover a{text-decoration: underline;}
+/* 메인보드 끝 */
+
+
+/* 미드 바 시작 */
+.middle-bar{width: 100%; height: 84px; background: url(https://lwi.nexon.com/maplestory/main/main_bg02.png) center top no-repeat; display: flex; justify-content: center;}
+.middle-bar .middle-wrap{width: 1280px; height: 100%; display: flex; justify-content: center; position: relative;}
+.middle-bar .middle-wrap ul{width: 1200px; height: 100%; display: flex; position: absolute; top: 24px; left: 65px;}
+.middle-bar .middle-wrap ul li{position: relative;}
+.middle-bar .middle-wrap ul li:nth-of-type(2){position: relative;}
+.middle-bar .middle-wrap ul li .link-icon{position: absolute; right: 36px; bottom: 52.5px;}
+.middle-bar .middle-wrap ul li .link-icon a:nth-child(1){position: relative; right: 5px;}
+.middle-bar .middle-wrap ul li:not(:last-child){margin-right: 12px; padding-right: 17px;}
+.middle-bar .middle-wrap ul li:not(:nth-child(1))::before{
+    content: "";
+    border: 3px solid #fff; position: absolute; border-radius: 50%;
+    top: 15px; left: -18px;
+}
+/* 미드 바 끝 */
+
+
+/* 게임 인포 시작 */
+.game-info{width: 100%; height: 790px;}
+.game-info .info-wrap{width: 1280px; height: 790px; margin: 0 auto; position: relative;}
+.game-info .video-wrap{width: 1200px; height: 328px; display: flex; justify-content: space-between; margin: 0 auto; position: relative; top: 70px;}
+.game-info .video-wrap .new-guide{width: 574px; height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; position: relative;}
+.game-info .video-wrap .new-guide h3{font-size: 28px; font-weight: 500; height: 32px; color: #373841;}
+.game-info .video-wrap .new-guide p{font-size: 15px; color: #777777; height: 17px; position: relative; top: -4px; font-weight: 100;}
+.game-info .video-wrap .new-guide h3,
+.game-info .video-wrap .new-guide p{flex-basis: 100%;}
+.game-info .video-wrap .new-guide ul{display: flex; }
+.game-info .video-wrap .new-guide ul li{font-size: 0; width: 279px; height: 256px; margin-top: 10px; }
+.game-info .video-wrap .new-guide ul li:nth-child(2){right: 0; position: absolute;}
+.game-info .video-wrap .new-guide ul li .video-img{position: relative;}
+.game-info .video-wrap .new-guide ul li .video-img img{width: 277px; height: 157px;}
+.game-info .video-wrap .new-guide ul li .video-img span img{width: 40px; height: 43px; position: absolute; right: 10px; top: 10px;}
+.game-info .video-wrap .new-guide .more a{position: absolute; right: 0; top: 6px;}
+.game-info .video-wrap .new-guide ul li .text-area{width: 276.98px; height: 99px; display: flex; font-size: 16px; border: 1px solid #ebebeb; justify-content: center; align-items: center;}
+.game-info .video-wrap .new-guide ul li .text-area a{font-size: 17px; padding: 0 5%; color: #333; line-height: 1.2; font-weight: 100;}
+
+.game-info .video-wrap .codi-guide{width: 574px; height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; position: relative;}
+.game-info .video-wrap .codi-guide h3{font-size: 28px; font-weight: 500; height: 32px; color: #373841;}
+.game-info .video-wrap .codi-guide p{font-size: 15px; color: #777777; height: 17px; position: relative; top: -2px; font-weight: 100;}
+.game-info .video-wrap .codi-guide h3,
+.game-info .video-wrap .codi-guide p{flex-basis: 100%;}
+.game-info .video-wrap .codi-guide ul{display: flex; }
+.game-info .video-wrap .codi-guide ul li{font-size: 0; width: 279px; height: 256px; margin-top: 10px; }
+.game-info .video-wrap .codi-guide ul li:nth-child(2){right: 0; position: absolute;}
+.game-info .video-wrap .codi-guide ul li .youtube-img{position: relative;}
+.game-info .video-wrap .codi-guide ul li .youtube-img img{width: 277px; height: 157px;}
+.game-info .video-wrap .codi-guide ul li .youtube-img span img{width: 40px; height: 43px; position: absolute; right: 10px; top: 10px;}
+.game-info .video-wrap .codi-guide .more a{position: absolute; right: 0; top: 6px;}
+.game-info .video-wrap .codi-guide ul li .text-area{width: 276.98px; height: 99px; display: flex; font-size: 16px; border: 1px solid #ebebeb; justify-content: center; align-items: center;}
+.game-info .video-wrap .codi-guide ul li .text-area a{font-size: 17px; padding: 0 5%; color: #333; line-height: 1.2; font-weight: 100;}
+
+
+
+.game-info .info-wrap .info-box{position: relative; display: flex; justify-content: space-between; width: 1200px; margin: 93px auto 0; top: 70px;}
+.game-info .info-wrap .info-box h3{font-size: 28px; font-weight: 400; display: inline-block;}
+.game-info .info-wrap .info-box > span{position: absolute; left: 0; top: 89px;}
+.game-info .info-wrap .info-box ul{display: flex; gap: 35px; top: 0; right: 0;}
+.game-info .info-wrap .info-box ul li{background-color: #576caf; width: 279px; height: 229px; border-radius: 30px; position: relative;}
+.game-info .info-wrap .info-box ul li:nth-child(2){background-color: #407591;}
+.game-info .info-wrap .info-box ul li:nth-child(3){background-color: #557ac0;}
+
+.game-info .info-wrap .info-box ul li a{z-index: 10; position: relative;}
+.game-info .info-wrap .info-box ul li span{transition:all 0.5s ease-in-out; opacity: 0;}
+.game-info .info-wrap .info-box ul li:nth-of-type(1) span{
+    background:url("https://lwi.nexon.com/maplestory/main/over01_img01.png") center top no-repeat; position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    width:276px; height:276px; z-index:1;
+}
+.game-info .info-wrap .info-box ul li:nth-of-type(1) span:nth-child(2){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:180px; height:180px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over01_img02.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(1) span:nth-child(3){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:132px; height:132px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over01_img03.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(1) span:nth-child(4){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:72px; height:72px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over01_img04.png") center top no-repeat;}
+
+
+.game-info .info-wrap .info-box ul li:nth-of-type(2) span{position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:276px; height:276px; z-index:1; background:url("https://lwi.nexon.com/maplestory/main/over02_img01.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(2) span:nth-child(2){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:180px; height:180px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over02_img02.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(2) span:nth-child(3){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:132px; height:132px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over02_img03.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(2) span:nth-child(4){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:72px; height:72px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over02_img04.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(3) span{position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:276px; height:276px; z-index:1; background:url("https://lwi.nexon.com/maplestory/main/over03_img01.png") center top no-repeat;}
+
+
+.game-info .info-wrap .info-box ul li:nth-of-type(3) span:nth-child(2){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:180px; height:180px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over03_img02.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(3) span:nth-child(3){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:132px; height:132px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over03_img03.png") center top no-repeat;}
+.game-info .info-wrap .info-box ul li:nth-of-type(3) span:nth-child(4){position: absolute; left:50%; top:50%; transform: translate(-50%,-50%) scale(0); width:72px; height:72px; z-index:1;background:url("https://lwi.nexon.com/maplestory/main/over03_img04.png") center top no-repeat;}
+
+
+
+.game-info .info-wrap .info-box ul li:hover span:nth-child(1){transform: translate(-50%,-50%) scale(1); opacity: 1; }
+.game-info .info-wrap .info-box ul li:hover span:nth-child(2){transform: translate(-50%,-50%) scale(1); opacity: 1; transition-delay: 0.3s}
+.game-info .info-wrap .info-box ul li:hover span:nth-child(3){transform: translate(-50%,-50%) scale(1); opacity: 1; transition-delay: 0.4s}
+.game-info .info-wrap .info-box ul li:hover span:nth-child(4){transform: translate(-50%,-50%) scale(1); opacity: 1; transition-delay: 0.5s}
+/* 게임 인포 끝 */
+
+
+/* 미디어 섹션 시작 */
+.media-sec{width: 100%; background-color: #f7f7f7;}
+.media-sec .media-wrap{width: 1280px; height: 488px; display: flex; margin: 0 auto;}
+.media-sec .media-box{width: 1200px; height: 100%; display: flex; margin: 0 auto; position: relative; justify-content: space-between;}
+
+.media-sec .media-box .artwork{margin-top: 52px; width: 574px; height: 328px; position: relative;}
+.media-sec .media-box .artwork h3{font-size: 28px; font-weight: 500;}
+.media-sec .media-box .artwork .more a{position: absolute; right: 0; top: 6px;}
+.media-sec .media-box .artwork ul{margin-top: 21px; width: 100%; height: 100%; position: relative;}
+.media-sec .media-box .artwork ul li:nth-of-type(1) img{position: absolute; z-index: 1;}
+.media-sec .media-box .artwork ul li:nth-of-type(2) img{position: absolute; right: 1px; top: 50px;}
+.media-sec .media-box .artwork ul li:nth-of-type(2) span{width: 380px; height: 230px; opacity: 1; background-color: rgb(0,0,0,0.3); display: block; position: absolute; right: 1px; top: 50px;}
+
+.media-sec .media-box .pinkbean{margin-top: 52px; position: relative; width: 574px; height: 328px;}
+.media-sec .media-box .pinkbean h3{background: url("https://lwi.nexon.com/maplestory/main/pink_icon.png") left 8px no-repeat; display: flex; font-size: 28px; padding-left: 26px; font-weight: 500; }
+.media-sec .media-box .pinkbean .more a{position: absolute; right: 0; top: 6px;}
+.media-sec .media-box .pinkbean ul{display: flex; margin-top: 21px; justify-content: space-between;}
+.media-sec .media-box .pinkbean ul li{border: 1px solid #ebebeb;}
+.media-sec .media-box .pinkbean ul li a img{width: 277px; height: 277px;}
+/* 미디어 섹션 끝 */
+
+/* 푸터!! */
+.footer{width: 100%; height: 220px; background-color: #2f3238; font-weight: 100;}
+.footer .footer-wrap{width: 1280px; height: 100%; margin: 0 auto;}
+.footer .footer-text{width: 1200px; height: 100%; margin: 0 auto; position: relative;}
+.footer .footer-text .footer-top{position: relative; top: 46px;}
+.footer .footer-text .footer-top ul{display: flex;}
+.footer .footer-text .footer-top ul li{font-size: 12px; padding: 0 8px; position: relative;}
+.footer .footer-text .footer-top ul li a{color: #b1b3b9;}
+.footer .footer-text .footer-top ul li:nth-child(1){padding-left: 0;}
+.footer .footer-text .footer-top ul li:nth-child(5) a{font-weight: bold; color: #fff;}
+.footer .footer-text .footer-top ul li:nth-child(5):hover a{border-bottom: 1px solid #fff;}
+.footer .footer-text .footer-top ul li:not(:nth-child(1))::after{
+    content: "";
+    position: absolute; background-color: #b1b3b9;
+    width: 1px; height: 11px; left: 0; top: 0px;
+}
+
+
+.footer .footer-text .footer-bottom{color: #b1b3b9; font-size: 11px; position: relative; top: 67px; line-height: 1.5; letter-spacing: -0.03em;}
+.footer .footer-text .footer-bottom p:nth-of-type(1) a{color: #b1b3b9; border-bottom: 1px solid #b1b3b9;}
+.footer .footer-text .footer-bottom p:nth-of-type(2){color: #888; padding-top: 1px;}
+.footer .footer-text .footer-bottom span{padding-right: 5px;}
+
+.footer .footer-text .footer-img{position: relative; top: 82px;}
+
+
+.footer .footer-text .familysite{position: absolute; width: 238px; height: 151px; top: 30px; right: 0px; text-align: center;}
+.footer .footer-text .familysite span{position: relative; width: 100%; height: 40px; line-height: 40px; border: 1px solid #474a51; display: inline-block; background-color: #34373d; cursor: pointer;}
+.footer .footer-text .familysite a{color: #b1b3b9; font-size: 13px;}
+.footer .footer-text .familysite span a:nth-of-type(2){position: absolute; right: 10px; top: 0;}
+
+.footer .footer-text .familysite .list{padding: 0 15px; width: 208px; border: 1px solid #474a51; border-top: none; height: 0; overflow: hidden; transition: 0.7s;}
+.footer .footer-text .familysite .list.on{height: 74px;}
+.footer .footer-text .familysite .list ul{display: flex; padding: 0 8px; height: 36px; line-height: 36px; border-top: 1px solid #474a51; justify-content: space-between;}
+.footer .footer-text .familysite .list ul:first-child{border-top: none;}
+.footer .footer-text .familysite .list ul li a{font-size: 12px;}
