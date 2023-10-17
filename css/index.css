@@ -71,12 +71,13 @@ a{text-decoration: none; color: #000;}
 .main-slide .inner-txt ul li a p{color: #fff; font-size: 19px; margin-top: 33px; font-weight: 100;}
 .main-slide > ul li:nth-of-type(22) .inner-txt ul li a h2{letter-spacing: -0.14em;}
 
-.header .main-bar{position: absolute; top: 468px; width: 100%; z-index: 99; height: 93px;}
-.header .main-bar .thumbs{position: absolute; bottom: 0; width: 100%; height: 93px; left: 0; display: flex; align-items: center;}
-.header .main-bar .thumbs ul{display: flex;}
-.header .main-bar .thumbs .thumbs-wrap{width: 1100px; height: 46px; margin: 0 auto; position: relative; overflow: hidden; }
+.header .main-bar{position: absolute; top: 468px; width: 100%; z-index: 99; height: 93px; background: url("./../images/maple/under_bar.png") center;}
+.header .main-bar .under-bar-wrap{height: 100%; width: 1200px; margin: 0 auto; padding: 0 40px;}
+.header .main-bar .thumbs{bottom: 0; width: 100%; left: 0; display: flex; align-items: center;}
+.header .main-bar .thumbs ul{display: flex; }
+.header .main-bar .thumbs .thumbs-wrap{width: 1100px; height: 46px; margin: 0 auto; overflow: hidden; }
 .header .main-bar .thumbs .thumbs-wrap .thumbs-area{width: 500%; display: flex; position: relative;}
-.header .main-bar .thumbs ul li{margin-left: 17px; flex-basis: 210px; width: 210px; position: relative;}
+.header .main-bar .thumbs ul li a{margin-left: 17px; width: 210px; position: relative;}
 .header .main-bar .thumbs ul li:nth-child(2){margin-right: 180px;}
 .header .main-bar .thumbs .img img{width: 100px; height: 40px; position: relative; opacity: 0.3; }
 .header .main-bar .thumbs ul li:hover img,
@@ -84,7 +85,7 @@ a{text-decoration: none; color: #000;}
 .header .main-bar .thumbs ul li:hover .txt,
 .header .main-bar .thumbs ul li.on .txt{color: #fff;}
 
-.header .main-bar .thumbs a{display: flex; font-size: 12px; color: #686868; margin-top: 7px;}
+.header .main-bar .thumbs a{display: flex; font-size: 12px; color: #686868;}
 .header .main-bar .thumbs a .txt{margin-left: 15px; margin-top: 4px; letter-spacing: -0.1em;}
 
 .header .main-bar img{width: 100%; height: 100%;}
@@ -103,7 +104,7 @@ a{text-decoration: none; color: #000;}
     color: #fff;
 }
 
-.header .main-bar .slide-nb > ul{display: flex; position: absolute; left: 879px; width: 137px; top: 7px; z-index: 10;}
+.header .main-bar .slide-nb > ul{display: flex; margin: 0 auto; left: 879px; width: 137px; top: 7px; z-index: 10;}
 .header .main-bar .slide-nb > ul li img{height: 16px;}
 .header .main-bar .slide-nb > ul li{font-size: 22px; font-weight: 200; position: absolute; margin-top: 5px;}
 .header .main-bar .slide-nb > ul li:nth-child(1){color: #f68500;}
@@ -112,12 +113,9 @@ a{text-decoration: none; color: #000;}
 .header .main-bar .slide-nb > ul li:nth-child(4) a{left: 100px; position: absolute; width: 18px; height: 18px; margin-top: 3px;}
 .header .main-bar .slide-nb ul li:nth-child(4) a img{height: 18px; width: 18px;}
 
-.header .main-bar .arrow{width: 100%; height: 100%;}
-.header .main-bar .arrow ul{position: relative; left: 368px;}
-.header .main-bar .arrow ul li{position: absolute; top: -55px;}
-.header .main-bar .arrow ul li:nth-of-type(1) a{left: 368px;}
-.header .main-bar .arrow ul li:nth-of-type(2){right: 750px;}
-.header .main-bar .arrow img{width: 15px; height: 20px; }
+.header .main-bar .arrow{margin-left: 10px; width: 1170px; position: absolute; top: 50%; transform: translateY(-50%);}
+.header .main-bar .arrow ul{display: flex; justify-content: space-between;}
+.header .main-bar .arrow img{width: 15px; height: 20px;}
 
 
 
@@ -143,31 +141,31 @@ position: absolute; left: -30px; top: 70px;}
 
 /* 언더 바 시작 */
 .under-bar{background-color: #252428; height: 180px; position: relative; width: 100%;}
-.under-bar .update-center{display: flex; position: relative; height: 100%;}
-.under-bar .update-center a{position: relative; left: 18.5%; top: 25px;}
+.under-bar .wrap{width: 1200px; padding: 0 40px; margin: 0 auto; display: flex; align-items: center; height: 100%; justify-content: space-between;}
+.under-bar .update-center{width: 450px; display: flex; position: relative; align-items: center; justify-content: space-between;}
 .under-bar .update-center a:not(:nth-child(1)){display: block;}
-.under-bar .update-center a:nth-child(2){color: #f68500; font-size: 24px; position: relative;
-margin-top: 35px; font-weight: 100; left: 370px; top: 25px;}
-.under-bar .update-center a:nth-child(3){color: #a9a9a9; font-size: 15px; position: relative;
-left: 196px; top: 100px; letter-spacing: -0.03em;}
+.under-bar .update-center .txt a:nth-child(1){color: #f68500; font-size: 24px; font-weight: 100;}
+.under-bar .update-center .txt a:nth-child(2){color: #a9a9a9; font-size: 15px; letter-spacing: -0.03em;}
 
-.under-bar .start-btn a{position: absolute; left: 43.4%; top: -26.5%; overflow: hidden; width: 252px; height: 252px; z-index: 99;}
-.under-bar .download a{position: absolute; left: 45.75%; top: 98%; z-index: 99;}
+.under-bar .wrap .start-btn{position: relative; width: 252px; height: 252px; z-index: 99; overflow: hidden; margin-bottom: 25px;}
+.under-bar .wrap .start-btn .download a{width: 163px; height: 29px; position: absolute; bottom: 0; left: 43px;}
 
-.under-bar .login ul li{position: absolute; right: 352px; top: 15%; display: flex;}
+.under-bar .login-wrap{width: 436px;}
+.under-bar .login ul li{display: flex;}
 .under-bar .login ul li a:nth-child(1){margin-right: 7px;}
 
-.under-bar .easy-login a{background-color: rgba(17, 17, 18, .6);  position: absolute; right: 653px; top: 50%; width: 134px; height: 38px; text-align: center;}
-.under-bar .easy-login img{position: relative; top: 8px; left: -1px;}
+.under-bar .easy-wrap{display: flex; justify-content: space-between;}
+.under-bar .easy-wrap .easy-login{background-color: rgba(17, 17, 18, .6); width: 134px; height: 38px; display: flex; justify-content: center;}
+.under-bar .easy-wrap .easy-login a{ text-align: center;}
+.under-bar .easy-wrap .easy-login img{position: relative; top: 8px; left: -1px;}
 
-.under-bar .easy-login2{width: 298px; height: 38px; background:url("https://ssl.nexon.com/s2/game/maplestory/renewal/common/tpa_login_bg.png") center top no-repeat; position: absolute; right: 352px; top: 50%;}
+.under-bar .easy-login2{width: 298px; height: 38px; background:url("https://ssl.nexon.com/s2/game/maplestory/renewal/common/tpa_login_bg.png") center top no-repeat; right: 352px; top: 50%;}
 .under-bar .easy-login2 ul{margin-left: 157px; padding-top: 8px;}
 .under-bar .easy-login2 ul li a:nth-child(1){margin-right: 6px;}
 .under-bar .easy-login2 ul li a:nth-child(2){margin-right: 6.5px;}
 .under-bar .easy-login2 ul li a:nth-child(3){margin-right: 7px;}
 
-.join ul{position: absolute; right: 655px; bottom: 25px;}
-.join ul li a:nth-child(2){margin-left: -4px;}
+.join ul{margin-top: 10px;}
 /* 언더 바 끝 */
 
 /* 전체메뉴 */
